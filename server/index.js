@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 // loading routes
 app.use('/', router); 
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 3001
 const MONGO_URL = process.env.MONGO_URL
 
 app.get('/', function (req, res) {
