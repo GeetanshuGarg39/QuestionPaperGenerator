@@ -17,7 +17,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex  items-center justify-center h-screen text-slate-600">
+      <div className="flex flex-col items-center justify-center h-screen text-slate-600">
+        <p className="text-4xl text-black font-extrabold mb-8">Question Paper Generator</p>
         <form className="flex flex-col items-center justify-center min-w-[200px] gap-4">
           <div className="w-full">
             <label htmlFor="total">Total Marks</label>
