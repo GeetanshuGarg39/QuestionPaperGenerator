@@ -61,7 +61,15 @@ export default function Home() {
             ></input>
           </div>
           <Link
-            href="/"
+            href={{
+              pathname: "/question-paper",
+              query: {
+                total: data.total,
+                easy: data.easy,
+                medium: data.medium,
+                hard: data.hard,
+              },
+            }}
             className="p-4 bg-blue-700 text-white rounded-xl mt-3 hover:bg-blue-900"
           >
             Generate Paper
