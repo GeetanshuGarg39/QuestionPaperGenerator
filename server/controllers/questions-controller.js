@@ -59,6 +59,9 @@ export const generatePaper = async (req, res) => {
     if (!total || !easy || !medium || !hard) {
       return res.status(400).json({ error: "Invalid request parameters" });
     }
+    if(Number(easy)+Number(medium)+Number(hard)>100){
+      return res.status(400).json({message:"Total percentage cannot be greater than 100%"})
+    }
 
     const questionPaper = await selectQuestions(total, distribution);
     res.status(200).json({ questionPaper });
